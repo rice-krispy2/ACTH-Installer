@@ -123,16 +123,19 @@ def instalFw():
     # Notify the user that we are installing firmware
     print("Installing Firmware! This could take a moment, please wait...")
     # Extract the firmware
-    with ZipFile(fw_check, 'r') as zObject:
-        zObject.extractall(path=f"{fw_extract}")
-    # Add the filename to the fw_files list
-    for filename in os.listdir(fw_extract):
-        if os.path.isfile(os.path.join(fw_extract, filename)):
-            fw_files.append(filename)
-    # Loop through the file name and create the appropriate directories then move the files
-    for i in fw_files:
-        os.makedirs(f"{fw_install_path}\\{i}")
-        shutil.move(f"{fw_extract}\\{i}", f"{fw_install_path}\\{i}\\00")
+    try:
+        with ZipFile(fw_check, 'r') as zObject:
+            zObject.extractall(path=f"{fw_extract}")
+        # Add the filename to the fw_files list
+        for filename in os.listdir(fw_extract):
+            if os.path.isfile(os.path.join(fw_extract, filename)):
+                fw_files.append(filename)
+        # Loop through the file name and create the appropriate directories then move the files
+        for i in fw_files:
+            os.makedirs(f"{fw_install_path}\\{i}")
+            shutil.move(f"{fw_extract}\\{i}", f"{fw_install_path}\\{i}\\00")
+    except FileNotFoundError:
+        print("Firmware not found! Please make sure it is in your downloads folder and is called 'Firmware.21.0.0.zip'!")
 instalFw()
 # Tell the user that eden has been installed and to press enter to exit
 # and do a lil advertising :Bellapsycho:
