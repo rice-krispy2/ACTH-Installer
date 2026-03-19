@@ -17,3 +17,5 @@ I am not affiliated with Nintendo nor do I endorse Piracy, this program violates
 This program is FOSS (Free Open Source Software) meaning if you paid for this you have been scammed and should demand your money back. These programs are virus free and always will be.
 
 However, I am not responsible for any damages made to your computer if this code has been altered in any fashion
+
+A post install tutorial can be found [https://github.com/President00007/Ryujinx-setup---complete-tutorial-for-Animal-Crossing-New-Horizons/blob/main/README.md](here!!)
