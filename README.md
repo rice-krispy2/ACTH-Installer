@@ -18,4 +18,4 @@ This program is FOSS (Free Open Source Software) meaning if you paid for this yo
 
 However, I am not responsible for any damages made to your computer if this code has been altered in any fashion
 
-A post install tutorial can be found [https://github.com/President00007/Ryujinx-setup---complete-tutorial-for-Animal-Crossing-New-Horizons/blob/main/README.md](here!!)
+A post install tutorial can be found [here](https://github.com/President00007/Ryujinx-setup---complete-tutorial-for-Animal-Crossing-New-Horizons/blob/main/README.md)
