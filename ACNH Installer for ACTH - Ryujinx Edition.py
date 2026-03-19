@@ -2,8 +2,6 @@
 # Created March 14th, 2026
 # Created by mitzikritzi2191
 
-# TODO: Get Firmware installed automiatically
-
 # Path allows us to use the user's home directory
 from pathlib import Path
 # This allows us to use functionalities such as making directories
@@ -57,7 +55,7 @@ def downloadRyujinx(consent):
     elif consent == "Yes" or consent == "yes"  or consent == "Si" or consent == "Sí" or consent == "yEs" or consent == "yES" or consent == "YES" or consent == "sí" or consent == "SÍ" or consent == "sÍ" or consent == "si":
         # Tell the user we're downloading Ryujinx
         print("Okay! Downloading Ryujinx now...")
-        # Send a request to Eden's gitlab and download
+        # Send a request to Ryujinx's gitlab and download
         downloaded_file = requests.get(ryujinx_url, params=file_type)
         # Check if the file is corrupted
         sanity_check = downloaded_file.ok
@@ -73,14 +71,14 @@ def downloadRyujinx(consent):
 downloadRyujinx(consent)
 # Notify to the user what is going to happen in phase 2 of install
 print(f"In phase two of installation, I will be extracting 'Ryujinx.zip' that is located in {file_name}!")
-print("I will also be creating a folder called 'portable' in the Eden directory, and I will be creating a subdirectory called 'system' ^-^")
+print("I will also be creating a folder called 'portable' in the Ryujinx directory, and I will be creating a subdirectory called 'system' ^-^")
 
 # This function sets up Ryujinx
 def setupRyujinx():
     # Open the file and extract to where we want it to go
     with ZipFile(file_name, 'r') as zObject:
         zObject.extractall(path=f"{extracted_ryujinx}")
-    # Notify the user that Eden has been extracted and where it is available
+    # Notify the user that Ryujinx has been extracted and where it is available
     print(f"Ryujinx has been extracted and is available in {extracted_ryujinx}!")
     # Tell the user we're making a new directory
     print("Now creating directory 'user'!")
@@ -98,7 +96,7 @@ def setupRyujinx():
         os.makedirs(fw_install_path)
     print("Firmware install path created!")
 setupRyujinx()
-# Inform the user eden is installed and its a portable install, Then tell them we're searching the downloads folder
+# Inform the user Ryujinx is installed and its a portable install, Then tell them we're searching the downloads folder
 print(f"Ryujinx has now been installed and is a portable installation! I will be searching your downloads folder for Prod.keys now!")
 
 # Install the keys
@@ -137,7 +135,7 @@ def instalFw():
     except FileNotFoundError:
         print("Firmware not found! Please make sure it is in your downloads folder and is called 'Firmware.21.0.0.zip'!")
 instalFw()
-# Tell the user that eden has been installed and to press enter to exit
+# Tell the user that Ryujinx has been installed and to press enter to exit
 # and do a lil advertising :Bellapsycho:
 print("That's all! If you aren't already, join our discord server for fun treasure islands and hangouts!")
 print("https://discord.gg/actreasurehub")
