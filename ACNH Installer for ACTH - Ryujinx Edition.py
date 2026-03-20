@@ -47,12 +47,12 @@ consent = input("May I download Ryujinx? (Yes/No): ")
 def downloadRyujinx(consent):
     # If consent is not given, Terminate the program
     # I know the if statement is a bit lengthy but this ensures every possible combination of the word "No"
-    if consent == "No" or consent == "no" or consent == "nO" or consent == "NO":
+    if consent == "n" or consent == "N" or consent == "No" or consent == "no" or consent == "nO" or consent == "NO":
         print("That's okay ^^ I will not download Ryujinx.")
         print("This program will be terminated. Thank you for using it!")
     # If consent is given, Download Ryujinx
     # Again, another lengthy elif statement but this ensures every spelling of yes in both english and spanish
-    elif consent == "Yes" or consent == "yes"  or consent == "Si" or consent == "Sí" or consent == "yEs" or consent == "yES" or consent == "YES" or consent == "sí" or consent == "SÍ" or consent == "sÍ" or consent == "si":
+    elif consent == "y" or consent == "Y" or consent == "yes" or consent == "Yes" or consent == "YEs" or consent == "YES" or consent == "yEs" or consent == "yES" or consent == "yeS" or consent == "YeS" or consent == "s" or consent == "S" or consent == "si" or consent == "sI" or consent == "Si" or consent == "SI" or consent == "sí" or consent == "Sí" or consent == "SÍ" or consent == "sÍ":
         # Tell the user we're downloading Ryujinx
         print("Okay! Downloading Ryujinx now...")
         # Send a request to Ryujinx's gitlab and download
