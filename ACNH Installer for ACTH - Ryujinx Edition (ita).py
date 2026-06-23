@@ -18,7 +18,7 @@ home = Path.home()
 # Conservo la cartella "Download"
 downloads_folder = f"{home}\\Downloads"
 # Conservo l'url di Ryujinx come stringa per utilizzarlo dopo
-ryujinx_url = "https://git.ryujinx.app/api/v4/projects/68/packages/generic/Ryubing-Canary/1.3.265/ryujinx-canary-1.3.265-win_x64.zip"
+ryujinx_url = "https://git.ryujinx.app/Ryubing/Canary/releases/download/1.3.315/ryujinx-canary-1.3.315-win_x64.zip"
 # Conservo il tipo di file da scaricare
 file_type = {"downloadformat": "zip"}
 # Setto il nome del file da scaricare come "Ryujinx.zip"
